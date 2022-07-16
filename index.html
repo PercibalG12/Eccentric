@@ -8,6 +8,8 @@
     <!-- !BOX ICONS -->
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!--Light-Box-css-------------------------------->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
     <!-- !SCROLL REVEAL -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js" ></script>
     <!-- !MY STYLESHEET -->
@@ -113,61 +115,48 @@
       </div>
     </section>
 
-    <!-- attempted project sec -->
-    <!-- <section id="home1" >
-      <div class="container">
-        <ul>
-          <li>
-              <div class="link2">
-                <a href="models.html"> <span> Websites</span> </a>
-                  
-                  <div class="hover-reveal image01">
-                 <img class="hidden-img" src="./assets/images/statue_hero.png" alt="" srcset="">
-                  </div>
-              </div>
-              </li>
-    
-               <li>
-              <div class="link2">
-                <a href="photoshoots.html"> <span>Videos</span> </a>
-                 
-                  <div class="hover-reveal image01">
-                 <img class="hidden-img" src="./assets/images/statue_hero.png" alt="" srcset=""> 
-                  </div>
-              </div>
-          </li>
-    
-            <li>
-              <div class="link2">
-                <a href="generic.html"> <span>Videos</span> </a>
-                 
-                  <div class="hover-reveal image01">
-                 <img class="hidden-img" src="./assets/images/statue_hero.png" alt="" srcset="">
-                  </div>
-              </div>
-          </li>
-    
-         
-      </ul>
-      </div>
-     
-    </section> -->
-
-    <!-- !PRojects SECTION -->
+    <!-- !PRROJECTS SECTION -->
 
     <section id="projects" class="projects">
       <div class="project-heading">
-        <span>ALL Works</span>
-        <h3>ALL</h3>
+        <h3>EXPLORE</h3>
       </div>
 
       <ul class="project-filter">
-        <li class="list project-filter-active">All</li>
-        <li class="list">Web-Designs</li>
-        <li class="list">Video-Edits</li>
-        <li class="list"></li>
-        <li class="list"></li>
+        <li class="list project-filter-active" data-filter="all">All</li>
+        <li class="list" data-filter="Web-Designs">Web-Designs</li>
+        <li class="list" data-filter="Video-Edits">Video-Edits</li>
       </ul>
+
+        <!--container--------->
+  <div class="portfolio-container">
+    <!--1------------>
+    <a href="./assets/images/get_in_touch.png" class="portfolio-box all" data-lightbox="work">
+      <img alt="" src="./assets/images/get_in_touch.png">
+    </a>
+    <!--2------------>
+    <a href="./assets/images/get_in_touch.png" class="portfolio-box Web-Designs" data-lightbox="work">
+      <img alt="" src="./assets/images/get_in_touch.png">
+    </a>
+    <!--3------------>
+    <a href="./assets/images/get_in_touch.png" class="portfolio-box Video-Edits" data-lightbox="work">
+      <img alt="" src="./assets/images/get_in_touch.png">
+    </a>
+    <!--4------------>
+    <a href="./assets/images/get_in_touch.png" class="portfolio-box app" data-lightbox="work">
+      <img alt="" src="./assets/images/get_in_touch.png">
+    </a>
+    <!--5------------>
+    <a href="./assets/images/get_in_touch.png" class="portfolio-box app" data-lightbox="work">
+      <img alt="" src="./assets/images/get_in_touch.png">
+    </a>
+    <!--6------------>
+    <a href="./assets/images/get_in_touch.png" class="portfolio-box app" data-lightbox="work">
+      <img alt="" src="./assets/images/get_in_touch.png">
+    </a>
+
+  </div>
+
     </section>
 
     <!-- !CONTACT SECTION -->
@@ -178,6 +167,32 @@
     
     <!-- !MY SCRIPT -->
     <script src="./assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  
+
+    <script>
+
+/*blog-filter-menu----------------------------*/
+$(document).on('click','.portfolio-filter li',function(){
+            $(this).addClass('portfolio-filter-active').siblings().removeClass('portfolio-filter-active')
+        });
+        
+     /*portfolio-filter---------------------------------*/
+     $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if(value == 'all'){
+                    $('.portfolio-box').show('1000');
+                }
+                else{
+                    $('.portfolio-box').not('.'+value).hide('1000');
+                    $('.portfolio-box').filter('.'+value).show('1000');
+                }
+            });
+        });
+
+    </script>
     
 </body>
 </html>
