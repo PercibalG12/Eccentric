@@ -45,10 +45,13 @@ body{
 }
 
 body.dark-theme{
-    --light-color: rgb(0, 0, 0);
-    --dark1-color: rgb(43, 24, 129);
-    --mid-yellow-color:red;
-    --border-top-color: rgba(255,255,255,.1); 
+    --dark-color: #004f00;
+    --dark1-color:#004F2D;
+    --mid-yellow-color: #FFDA22; 
+    /*  
+    #D87CAC
+    #F9B9C3*/
+    --border-top-color: rgba(235, 224, 224, 0.1); 
    
 }
 
@@ -94,6 +97,11 @@ textarea{
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
+}
+
+.section{
+    padding-block: var(--section-vertical-spacing);
+    position: relative;
 }
 /*  */
 
@@ -219,8 +227,22 @@ font-weight: bold;
 .dark-theme .theme-on{
     display: block;
 }
+/*  */
 
 /* !HERO STYLES*/
+
+.title{
+text-transform: uppercase;
+  font-weight: 300;
+}
+
+.main-title{
+    font-size: clamp(4.5rem, 10vw, 10rem);
+}
+
+
+
+/*  */
 
 /* !ABOUT ME STYLES */
 
