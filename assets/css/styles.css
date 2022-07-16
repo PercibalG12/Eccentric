@@ -392,7 +392,7 @@ position: relative;
 
 
 /* gallerys section  */
-#home1 {
+/* #home1 {
 min-height: 100vh;
 overflow: hidden;
 display:grid;
@@ -431,7 +431,7 @@ z-index: 10;
 mix-blend-mode: difference;
 display: inline-block;
 position: relative;
-/* color: white; */
+
 font-size: 4rem;
 text-transform: uppercase;
 
@@ -450,7 +450,6 @@ top: 50%;
 left: 50%;
 pointer-events: none;
 transform: translate(-50%, -50%);
-
 overflow: hidden;
 opacity: 0;
 transform: scale(0.8);
@@ -480,7 +479,7 @@ transition: transform .4s ease-out;
 		width: 220px;
 		height: 300px;
 	}
-}
+} */
 
 
 
