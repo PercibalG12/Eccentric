@@ -53,4 +53,5 @@ const sr = ScrollReveal({
 sr.reveal('.main-title', {origin: 'top'})
 sr.reveal('.teck-stack-item', {interval: 250})
 sr.reveal('.logo',{origin: 'left'})
+sr.reveal('.description',{origin: 'left'})
 sr.reveal('.navbar-buttons',{origin: 'right'})
