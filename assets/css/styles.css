@@ -88,10 +88,9 @@ textarea{
     outline: none;
 }
 
-/* 
-?RADIAL GRADIENT
-?background: radial-gradient(50% 50% at 50% 50%, rgba(255, 101, 118, .08) 0%, rgba(255, 101, 118, 0) 100%); 
-*/
+
+
+
 /* !REUSABLE CLASSES */
 .container{
     max-width: var(--container-width);
@@ -102,6 +101,10 @@ textarea{
 .section{
     padding-block: var(--section-vertical-spacing);
     position: relative;
+}
+
+.d-grid{
+    display: grid;
 }
 /*  */
 
@@ -317,6 +320,78 @@ text-transform: uppercase;
 /*  */
 
 /* !ABOUT ME STYLES */
+.section-decription{
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.descriptiion{
+    text-transform: uppercase;
+    font-weight: 300;
+    
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.teck-stack{
+    max-width: 50rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)) ;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    
+}
+
+.teck-stack-item{
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.teck-stack-item i { 
+    font-size: 2.5rem;
+    opacity: .5;
+    }
+
+.teck-stack-item::before,
+.teck-stack-item::after{
+    position: absolute;
+    top: -1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform .5s opacity .5s;
+}
+
+.teck-stack-item::before{
+    content: '';
+    border: 1rem solid transparent;
+    border-top-color: var(--dark-color);
+   transform: translateY(0);
+   z-index: 5;
+}
+.teck-stack-item::after{
+    content: attr(data-tooltip);
+   width: max-content;
+    border-top-color: var(--dark-color);
+    padding: .5rem  1rem;
+    border-radius:.4rem ; 
+   font-size: 1rem;
+}
+
+.teck-stack-item:hover::before{
+    opacity: 1;
+    transform: translateY(-.6rem);
+}
+
+.teck-stack-item:hover::after{
+    opacity: 1;
+    /* transform: translateY(-.6rem); */
+}
+
+
+
 
 /* !PORTFOLIO STYLES */
 
