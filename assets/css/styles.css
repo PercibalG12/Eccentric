@@ -467,14 +467,14 @@ position: relative;
 }
  
 @media(max-width:740px){
-.project-filter{
+/* .project-filter{
     background-color: #f9f9f9;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .project-filter-active{
     background-color: #ffffff;
     border: 1px solid rgb(219, 219, 219);
-}
+} */
 .project-box{
     width:80%;
 }
