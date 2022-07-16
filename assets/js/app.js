@@ -43,3 +43,24 @@ if (bodyElement.classList.contains('dark-theme')) {
 
 themeToggleButton.addEventListener('click', toggleTheme)
 // !SCROLL REVEAL
+
+
+const container = document.querySelectorAll('.container');
+const titleMainTitle = document.querySelectorAll('.title main-title');
+const sparkle = document.querySelectorAll('.inline-image has-sparkles has-sparkles-alt');
+
+
+for(let i = 0; i < container.length; i++) {
+  container[i].addEventListener('mousemove', (e) => {
+   titleMainTitle[i].style.opacity = 1;
+   titleMainTitle[i].style.transform = `transition(-100%, -50% ) rotate(5deg)`;
+    sparkle[i].style.transform = 'scale(1, 1)';
+   titleMainTitle[i].style.left = e.clientX + "px";
+  })
+  
+  link[i].addEventListener('mouseleave', (e) => {
+   titleMainTitle[i].style.opacity = 0;
+   titleMainTitle[i].style.transform = `transition(-50%, -50%) rotate(-5deg)`;
+    sparkle[i].style.transform = 'scale(0.8, 0.8)';
+  })
+}

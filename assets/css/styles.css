@@ -238,6 +238,14 @@ text-transform: uppercase;
 
 .main-title{
     font-size: clamp(4.5rem, 10vw, 10rem);
+    text-align: center;  /* change ltr if needed */
+    line-height: 1.15;
+}
+
+.inline-image{
+    width: 7rem;
+    height: 7rem;
+    background: url('../images/statue_hero.png');
 }
 
 
