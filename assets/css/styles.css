@@ -42,6 +42,7 @@ body{
     background-color: var(--dark1-color);
     color: var(--mid-yellow-color);
     overflow-x: hidden;
+    transition: 1s ease ;
 }
 
 body.dark-theme{
@@ -52,6 +53,7 @@ body.dark-theme{
     #D87CAC
     #F9B9C3*/
     --border-top-color: rgba(235, 224, 224, 0.1); 
+    transition: 1s ease;
    
 }
 
@@ -484,8 +486,51 @@ transition: transform .4s ease-out;
 
 
 
-/* !PORTFOLIO STYLES */
+/* !PROJECTS STYLES */
 
+#projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3.125rem 0;
+}
+
+.projects-heading{
+    margin-top:1.25rem ;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-heading h3{
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.project-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--dark-orange-color);
+    border-radius: 4rem;
+    margin-top: 1.25rem ;
+    flex-wrap: wrap;
+}
+
+.project-filter li{
+    margin:10px;
+    padding: 5px 5px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+}
+
+.project-filter-active{
+    background-color: var(--dark-color);
+    border-radius: 2rem;
+}
 /* !CONTACT STYLES */
 
 /* !FOOTER STYLES */
