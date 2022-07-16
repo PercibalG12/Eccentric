@@ -55,3 +55,24 @@ sr.reveal('.teck-stack-item', {interval: 250})
 sr.reveal('.logo',{origin: 'left'})
 sr.reveal('.description',{origin: 'left'})
 sr.reveal('.navbar-buttons',{origin: 'right'})
+
+
+const link2 = document.querySelectorAll('.link2');
+const linkHoverReveal = document.querySelectorAll('.hover-reveal');
+const linkImages = document.querySelectorAll('.hidden-img');
+
+
+for(let i = 0; i < link2.length; i++) {
+  link2[i].addEventListener('mousemove', (e) => {
+    linkHoverReveal[i].style.opacity = 1;
+    linkHoverReveal[i].style.transform = `transition(-100%, -50% ) rotate(5deg) `;
+    linkImages[i].style.transform = 'scale(1, 1)';
+    linkHoverReveal[i].style.left = e.clientX + "px";
+  })
+  
+  link2[i].addEventListener('mouseleave', (e) => {
+    linkHoverReveal[i].style.opacity = 0;
+    linkHoverReveal[i].style.transform = `transition(-50%, -50%) rotate(-5deg)`;
+    linkImages[i].style.transform = 'scale(0.8, 0.8)';
+  })
+}
