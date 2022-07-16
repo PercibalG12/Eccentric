@@ -55,6 +55,9 @@ sr.reveal('.teck-stack-item', {interval: 250})
 sr.reveal('.logo',{origin: 'left'})
 sr.reveal('.description',{origin: 'left'})
 sr.reveal('.navbar-buttons',{origin: 'right'})
+sr.reveal('.project-heading',{origin: 'top'})
+sr.reveal('.project-filter',{origin: 'right'})
+sr.reveal('.project-box',{interval: '250'})
 
 
 const link2 = document.querySelectorAll('.link2');

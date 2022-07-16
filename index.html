@@ -123,35 +123,35 @@
       </div>
 
       <ul class="project-filter">
-        <li class="list project-filter-active" data-filter="all">All</li>
-        <li class="list" data-filter="Web-Designs">Web-Designs</li>
+        <li class="list project-filter-active "  data-filter="all">All</li>
+        <li class="list" data-filter="Web-Designs" >Web-Designs</li>
         <li class="list" data-filter="Video-Edits">Video-Edits</li>
       </ul>
 
         <!--container--------->
-  <div class="portfolio-container">
+  <div class="project-container">
     <!--1------------>
-    <a href="./assets/images/get_in_touch.png" class="portfolio-box all" data-lightbox="work">
+    <a href="./assets/images/get_in_touch.png" class="project-box all" data-lightbox="work">
       <img alt="" src="./assets/images/get_in_touch.png">
     </a>
     <!--2------------>
-    <a href="./assets/images/get_in_touch.png" class="portfolio-box Web-Designs" data-lightbox="work">
+    <a href="./assets/images/get_in_touch.png" class="project-box Web-Designs" data-lightbox="work">
       <img alt="" src="./assets/images/get_in_touch.png">
     </a>
     <!--3------------>
-    <a href="./assets/images/get_in_touch.png" class="portfolio-box Video-Edits" data-lightbox="work">
+    <a href="./assets/images/get_in_touch.png" class="project-box Video-Edits" data-lightbox="work">
       <img alt="" src="./assets/images/get_in_touch.png">
     </a>
     <!--4------------>
-    <a href="./assets/images/get_in_touch.png" class="portfolio-box app" data-lightbox="work">
+    <a href="./assets/images/get_in_touch.png" class="project-box app" data-lightbox="work">
       <img alt="" src="./assets/images/get_in_touch.png">
     </a>
     <!--5------------>
-    <a href="./assets/images/get_in_touch.png" class="portfolio-box app" data-lightbox="work">
+    <a href="./assets/images/get_in_touch.png" class="project-box app" data-lightbox="work">
       <img alt="" src="./assets/images/get_in_touch.png">
     </a>
     <!--6------------>
-    <a href="./assets/images/get_in_touch.png" class="portfolio-box app" data-lightbox="work">
+    <a href="./assets/images/get_in_touch.png" class="project-box app" data-lightbox="work">
       <img alt="" src="./assets/images/get_in_touch.png">
     </a>
 
@@ -174,20 +174,20 @@
     <script>
 
 /*blog-filter-menu----------------------------*/
-$(document).on('click','.portfolio-filter li',function(){
-            $(this).addClass('portfolio-filter-active').siblings().removeClass('portfolio-filter-active')
+$(document).on('click','.project-filter li',function(){
+            $(this).addClass('project-filter-active').siblings().removeClass('project-filter-active')
         });
         
-     /*portfolio-filter---------------------------------*/
+     /*project-filter---------------------------------*/
      $(document).ready(function(){
             $('.list').click(function(){
                 const value = $(this).attr('data-filter');
                 if(value == 'all'){
-                    $('.portfolio-box').show('1000');
+                    $('.project-box').show('1000');
                 }
                 else{
-                    $('.portfolio-box').not('.'+value).hide('1000');
-                    $('.portfolio-box').filter('.'+value).show('1000');
+                    $('.project-box').not('.'+value).hide('1000');
+                    $('.project-box').filter('.'+value).show('1000');
                 }
             });
         });
