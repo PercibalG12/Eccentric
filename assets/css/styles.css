@@ -519,7 +519,28 @@ margin-bottom: 30px;
     border: none;
     outline: none;
     border-bottom: 3px solid var(--dark-orange-color);
+    transition: 1s ease;
 }
+
+.wrapper .box input:focus{
+    padding:10px 20px;
+    background: transparent;
+    margin-top: 10px;
+
+}
+
+
+
+
+      
+   
+    
+
+
+
+
+
+
 
 .wrapper .box textarea{
     width: 100%;
