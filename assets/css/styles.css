@@ -531,15 +531,30 @@ margin-bottom: 30px;
 }
 
 .container input[type="submit"]{
-    background-color: var(--mid-gray-color);
+    /* background-color: var(--mid-gray-color);
     border-radius: 4rem;
     padding: 15px 25px;
-    cursor: pointer;
+    cursor: pointer; */
+    background-color: transparent;
+    border: 2px solid;
+    padding: 15px 25px;
+    cursor :pointer;
+    margin-bottom: 5rem;
 }
 
 
-/* !FOOTER STYLES */
 
+/* !FOOTER STYLES */
+.footer-container{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--border-top-color);
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
 /* !SCROLLBAR */
 
 /* !MEDIA QUERIES */
